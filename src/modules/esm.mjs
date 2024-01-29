@@ -13,9 +13,9 @@ const random = Math.random();
 let unknownObject;
 
 if (random > 0.5) {
-  unknownObject = () => import("./files/a.json");
+  unknownObject = async () => await import("./files/a.json");
 } else {
-  unknownObject = () => import("./files/b.json");
+  unknownObject = async () => await import("./files/b.json");
 }
 
 console.log(`Release ${release()}`);
